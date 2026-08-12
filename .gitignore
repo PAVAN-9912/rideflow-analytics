@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Env
+.env
+.env.local
+**/.env
+**/.env.local
+
+# Build output
+dist/
+build/
+**/dist/
+**/build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Misc
+*.tmp
+coverage/
+
+.venv/
+data/*.csv
+
+data/*.parquet
+data/*.zip
+
+*.tsbuildinfo
