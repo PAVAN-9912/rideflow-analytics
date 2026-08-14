@@ -4,6 +4,11 @@ A full-stack ride-sharing trip analytics platform: React/TypeScript/Vite fronten
 Node/Express/TypeScript backend, MongoDB as the primary datastore with real
 geospatial (`2dsphere` / `$geoNear`) queries and aggregation-pipeline analytics.
 
+## 🚀 Live Demo
+
+👉 [RideFlow Analytics – Live Demo](https://rideflow-analytics-mdd331niq-pavans9912-3599s-projects.vercel.app)
+
+
 ## Features
 
 - **Dashboard** — KPI cards, pickup demand hotspot map, average fare by hour, top drivers, recent trips.
