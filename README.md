@@ -354,6 +354,9 @@ docs/api-documentation.md
 
 ---
 
+
+
+
 ## 📁 Project Structure
 
 ```
@@ -539,33 +542,69 @@ The following pages were verified after deployment:
 
 ## 📸 Screenshots
 
-The application includes:
+### 📊 Dashboard
 
-### Dashboard
+Overview of the ride-sharing dataset with KPI cards, demand hotspots, fare
+trends, top drivers, and recent trips.
 
-Overview of the ride-sharing dataset with KPI cards, demand hotspots, fare trends, top drivers, and recent trips.
+![Dashboard](docs/screenshots/dashboard.png)
 
-### Trip Analytics
+---
+
+### 📈 Trip Analytics
 
 Interactive charts for fare, duration, passengers, ratings, and trip volume.
 
-### Demand Hotspots
+![Trip Analytics](docs/screenshots/trip-analytics.png)
+
+---
+
+### 📍 Demand Hotspots
 
 Geographical visualization of pickup demand using an interactive map.
 
-### Nearby Trips
+![Demand Hotspots](docs/screenshots/demand-hotspots.png)
+
+---
+
+### 🗺️ Nearby Trips
 
 Radius-based geospatial trip search powered by MongoDB `$geoNear`.
 
-### Drivers
+![Nearby Trips](docs/screenshots/nearby-trips.png)
+
+---
+
+### 👨‍✈️ Drivers
 
 Driver rankings and fleet-level statistics.
 
-### Trips
+![Drivers](docs/screenshots/drivers.png)
+
+---
+
+### 🚕 Trips
 
 Searchable, filterable, and paginated trip data.
 
+![Trips](docs/screenshots/trips.png)
+
 ---
+
+### 🔎 Trip Details
+
+Detailed information for an individual trip, including fare, duration, rating,
+pickup/dropoff locations, and the map view.
+
+![Trip Details](docs/screenshots/trip-details.png)
+
+---
+
+### ⚙️ Settings
+
+Application connection and configuration reference.
+
+![Settings](docs/screenshots/settings.png)
 
 ## ✅ Project Verification
 
