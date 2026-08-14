@@ -110,80 +110,64 @@ The processed results are displayed through interactive charts, tables, maps, an
 
 ```text
                          User / Browser
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   Vercel Frontend   │
-                    │ React + TypeScript  │
-                    │ Vite + Tailwind CSS │
-                    └──────────┬──────────┘
-                               │
-                            REST API
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   Render Backend    │
-                    │ Node + Express + TS │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │    MongoDB Atlas    │
-                    │  ride_sharing_db    │
-                    │       trips         │
-                    └─────────────────────┘
+                              │
+                              ▼
+                   ┌─────────────────────┐
+                   │   Vercel Frontend   │
+                   │ React + TypeScript  │
+                   │ Vite + Tailwind CSS │
+                   └──────────┬──────────┘
+                              │
+                           REST API
+                              │
+                              ▼
+                   ┌─────────────────────┐
+                   │   Render Backend    │
+                   │ Node + Express + TS │
+                   └──────────┬──────────┘
+                              │
+                              ▼
+                   ┌─────────────────────┐
+                   │    MongoDB Atlas    │
+                   │  ride_sharing_db    │
+                   │       trips         │
+                   └─────────────────────┘
+```
+
+---
 
 ### Data Processing Flow
 
-```
+
+```text
 CSV Dataset
-```
-
      │
-
      ▼
-
 Streaming CSV Importer
-
      │
-
      ▼
-
 Data Validation & Transformation
-
      │
-
      ▼
-
 Batch Bulk Insert
-
      │
-
      ▼
-
 MongoDB Atlas
-
      │
-
      ├── Aggregation Pipelines
-
      │
-
      └── $geoNear Geospatial Queries
-
               │
-
               ▼
-
-         Express API
-
+          Express API
               │
-
               ▼
-
         React Dashboard
 
+```
+
 ---
+
 
 ## 📊 Dataset
 
