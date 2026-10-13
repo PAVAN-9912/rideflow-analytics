@@ -8,7 +8,8 @@ import type {
   Trip,
 } from "../types";
 
-const BASE_URL = "https://rideflow-analytics.onrender.com/api";
+const BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "https://rideflow-analytics.onrender.com/api";
 
 export class ApiError extends Error {
   status: number;

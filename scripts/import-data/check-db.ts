@@ -1,8 +1,17 @@
+import "dotenv/config";
 import mongoose from "mongoose";
 
 async function check() {
-  await mongoose.connect("mongodb://127.0.0.1:27017", {
-    dbName: "ride_sharing_db",
+  const uri =
+    process.env.MONGODB_URI ??
+    "mongodb://127.0.0.1:27017";
+
+  const dbName =
+    process.env.MONGODB_DATABASE ??
+    "ride_sharing_db";
+
+  await mongoose.connect(uri, {
+    dbName,
   });
 
   console.log("Host:", mongoose.connection.host);

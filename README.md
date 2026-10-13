@@ -6,7 +6,7 @@ RideFlow Analytics provides interactive dashboards, trip analytics, driver insig
 
 ## 🚀 Live Demo
 
-👉 **[RideFlow Analytics – Live Demo](https://rideflow-analytics-mdd331niq-pavans9912-3599s-projects.vercel.app)**
+👉 **[RideFlow Analytics – Live Demo](https://rideflow-analytics.vercel.app)**
 
 ### Production Architecture
 
