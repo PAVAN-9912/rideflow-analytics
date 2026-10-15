@@ -32,7 +32,7 @@ export function TripAnalytics() {
 
   const params = {
     from: applied.from || undefined,
-    to: applied.to || undefined,
+    to: applied.to ? `${applied.to}T23:59:59.999Z` : undefined,
     hour: applied.hour || undefined,
     passengerCount: applied.passengerCount || undefined,
     minFare: applied.minFare || undefined,
@@ -51,6 +51,8 @@ export function TripAnalytics() {
     <input
       type={type}
       placeholder={placeholder}
+      min={type === "date" ? "2024-12-31" : undefined}
+      max={type === "date" ? "2025-01-02" : undefined}
       value={filters[key]}
       onChange={(e) => setFilters((f) => ({ ...f, [key]: e.target.value }))}
       className="rounded-lg px-3 py-2 text-sm bg-paper border border-border outline-none focus:border-accent w-full"
@@ -60,6 +62,12 @@ export function TripAnalytics() {
   return (
     <div>
       <div className="rounded-xl p-4 bg-white border border-border mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+          <div className="text-xs text-sub">Filter analytics charts by date range, hours, fare, and passenger metrics.</div>
+          <span className="text-xs px-2.5 py-0.5 rounded-full bg-accentsoft text-accent font-medium self-start sm:self-auto">
+            Dataset Range: Dec 31, 2024 – Jan 2, 2025
+          </span>
+        </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-7 gap-3">
           {field("from", "From date", "date")}
           {field("to", "To date", "date")}
@@ -81,7 +89,7 @@ export function TripAnalytics() {
               setFilters(emptyFilters);
               setApplied(emptyFilters);
             }}
-            className="rounded-lg px-4 py-2 text-sm font-medium bg-paper border border-border text-sub"
+            className="rounded-lg px-4 py-2 text-sm font-medium bg-paper border border-border text-sub hover:text-ink transition"
           >
             Clear
           </button>

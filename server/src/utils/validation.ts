@@ -21,7 +21,12 @@ export const tripFiltersSchema = z.object({
   minRating: z.coerce.number().min(1).max(5).optional(),
   passengerCount: z.coerce.number().int().min(1).max(8).optional(),
   from: z.coerce.date().optional(),
-  to: z.coerce.date().optional(),
+  to: z.preprocess((val) => {
+    if (typeof val === "string" && /^\d{4}-\d{2}-\d{2}$/.test(val)) {
+      return new Date(`${val}T23:59:59.999Z`);
+    }
+    return val;
+  }, z.coerce.date().optional()),
   hour: z.coerce.number().int().min(0).max(23).optional(),
   sortBy: z.enum(["timestamp", "fare", "duration", "rating"]).optional(),
   sortDir: z.enum(["asc", "desc"]).optional(),
